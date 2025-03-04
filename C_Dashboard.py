@@ -47,12 +47,12 @@ if uploaded_file is not None:
    agg_function = st.selectbox("select aggregation function", ["mean", "sum", "count"])
    try:
       if agg_function == "mean":
-      agg_data = filtered_Data.groupby(group_by_column).mean()
-   elif agg_function == "sum":
-      agg_data = filtered_Data.groupby(group_by_column).sum()
-   else:
-      agg_data = filtered_Data.groupby(group_by_column).count()
-   st.write("Aggregated Data:", agg_data)
+         agg_data = filtered_Data.groupby(group_by_column).mean()
+      elif agg_function == "sum":
+         agg_data = filtered_Data.groupby(group_by_column).sum()
+      else:
+         agg_data = filtered_Data.groupby(group_by_column).count()
+      st.write("Aggregated Data:", agg_data)
    except:
       st.write("Choose the aggregation function according to data")
 
